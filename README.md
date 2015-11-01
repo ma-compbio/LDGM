@@ -7,5 +7,5 @@ This repository has four folders.
   a) simulation results
   b) validation on GTEx data
   c) BRCA data analysis.
-  Codes are written by Dechao Tian. See folder "Codes"
-4) Data for validation and analysis. See folder "Data"
+  Codes are written by Dechao Tian. See folder "Codes".
+4) Data for validation and analysis. See folder "Data".
