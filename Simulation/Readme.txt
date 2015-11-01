@@ -38,11 +38,11 @@
 #### networks by CNJGL with
 #### fixed \lambda_2
 ############################
-4) CNJGL/CNJGL.sh
+5) CNJGL/CNJGL.sh
 
 ############################
 #### Drop ROC curve, 
 #### Precision-Recall curve
 #### Compute AUC
 ############################
-5) ROC_PR.py
+5) ROC_PR.py6) ROC_PR.py
