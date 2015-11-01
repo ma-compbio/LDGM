@@ -6,7 +6,7 @@ format long g
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% First change the working directory
 %%% for example by 
-%%% cd('/Stand-alone example by DGM')
+%%% cd('/Stand_alone_example_by_DGM')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 addpath('DGM')
 
