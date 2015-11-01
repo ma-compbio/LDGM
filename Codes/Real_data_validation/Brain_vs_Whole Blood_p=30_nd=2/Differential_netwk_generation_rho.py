@@ -14,16 +14,12 @@ num_all_edges = p * (p - 1) / 2
 num_diff_edge = 2
 
 #######################################
-
-folder1 = '/home/dctian/Data/41 Networks/'
-file_TF_D = '475Genes with Synonyms.txt'
-
+os.chdir('/home/dctian/GGM/')
 
 Tissue_key = ['Lung', 'Whole Blood', 'Brain', 'Heart']
 i, j = 2, 1
 print Tissue_key[i], Tissue_key[j]
 ##################
-os.chdir('/home/dctian/GGM/')
 folder = 'Data/GTEx/'
 
 RPKM1 = pd.read_table('%sRPKM_%s.txt' % (folder, Tissue_key[i]), sep=',', index_col = 0)
