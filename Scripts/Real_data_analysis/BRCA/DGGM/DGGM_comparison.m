@@ -35,7 +35,6 @@ lambda_seq = linspace(lambda_min, lambda_max, k+1);
 lambda_seq = fliplr(lambda_seq(1:end-1))
 dlmwrite(lambda_output, lambda_seq, '-append');
 
-% for lambda = lambda_seq
 for i = 1:30
 	hdelta = differential_graph(hsigma1, hsigma2, lambda_seq(i));
 	hdelta = triu(hdelta, 1);

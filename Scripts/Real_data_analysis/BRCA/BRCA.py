@@ -27,7 +27,6 @@ subtype = ['LumA', 'LumB', 'Basal']
 ind2 = label.iloc[:,1].isin(subtype)
 label = label[ind2]
 
-# print label.iloc[:, 1].value_counts()
 label = label.sort('Subtype')
 colname = label.iloc[:,0]
 
