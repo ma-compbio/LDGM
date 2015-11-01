@@ -1,6 +1,5 @@
 rm(list = ls())
 suppressMessages(library(JGL))
-library(mail)
 
 Compare_delta_hdelta = function(hdelta_vect, delta_vect){
 	A = hdelta_vect != 0
@@ -186,6 +185,5 @@ for (m in m_all){
 	}
 }
 
-sendmail('dechaotian@gmail.com', paste('JGL_fused_lambda2=',lambda2,' is done'), 'Fetch your data!')
 
 q(save='no')

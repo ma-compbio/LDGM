@@ -11,21 +11,6 @@ folder = 'Comparison_p=100_n=300';
 
 addpath(strcat('Scripts/Simulation/', folder,'/', CNJGL_name))
 
-sender = 'stark198507@gmail.com';
-psswd = 'stark1985';
-
-setpref('Internet','E_mail',sender);
-setpref('Internet','SMTP_Server','smtp.gmail.com');
-setpref('Internet','SMTP_Username',sender);
-setpref('Internet','SMTP_Password',psswd);
-
-props = java.lang.System.getProperties;
-props.setProperty('mail.smtp.auth','true');
-props.setProperty('mail.smtp.socketFactory.class', ...
-                  'javax.net.ssl.SSLSocketFactory');
-props.setProperty('mail.smtp.socketFactory.port','465');
-
-recipient = 'dechaotian@gmail.com';
 
 p = 100;
 rho_all = [0.05, 0.1, 0.2];
@@ -121,9 +106,6 @@ for m=m_all
 		end	
 	end
 end
-subject = sprintf('CNJGL_lambda2=%dn with p=%d is done', lambda_2_sample, p );
-message = 'Congratulations';
-sendmail(recipient, subject, message);
 
 
 exit;

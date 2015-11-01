@@ -1,6 +1,5 @@
 rm(list = ls())
 suppressMessages(library(huge))
-library(mail)
 
 Matrix_2_sym = function(A){
 	B = t(A)
@@ -189,7 +188,6 @@ for (m in m_all){
 	}
 }
 
-sendmail('dechaotian@gmail.com', paste('Glasso with p=', p,'is done', sep=' '), 'Fetch your data!')
 
 
 q(save='no')

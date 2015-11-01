@@ -2,7 +2,6 @@ import os
 import sys
 import numpy as np
 import networkx as nx
-import smtplib
 
 folder = os.path.dirname(os.path.realpath(__file__))
 folder = str.split(folder, '/')
@@ -119,13 +118,4 @@ for m in m_all:
 			else:
 				pass
 				
-server = smtplib.SMTP('smtp.gmail.com:587')
-server.ehlo()
-server.starttls()
-server.login("stark198507@gmail.com", "stark1985")
- 
-msg = "%s is done" % os.path.basename(__file__)
-server.sendmail("dechaotian@gmail", "dechaotian@gmail.com", msg)
-server.quit()		
-
 sys.exit()

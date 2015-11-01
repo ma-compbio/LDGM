@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 from scipy.interpolate import interp1d
 from sklearn.metrics import auc
-import smtplib
 
 def auc_na(S):
 	n_s = len(S)
