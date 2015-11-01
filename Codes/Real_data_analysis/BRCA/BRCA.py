@@ -8,7 +8,7 @@ import random
 import itertools
 from scipy.stats import mannwhitneyu
 
-folder1 = '/home/dctian/Data/BRCAData/'
+folder1 = 'Data/BRCA/'
 file1 = 'tcgaExpressionMatrix.csv'
 file2 = 'tcgaSubtype.csv'
 file3 = 'Table_1_full_2012-03-15.csv'
