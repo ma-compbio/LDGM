@@ -8,7 +8,7 @@ cd('/home/dctian/GGM')
 k = 30;
 
 
-DGGM_name = 'DGGM';
+DGGM_name = 'DGM';
 folder = 'BRCA';
 	
 addpath(strcat('Scripts/', folder,'/', DGGM_name))
