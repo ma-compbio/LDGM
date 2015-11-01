@@ -1,8 +1,8 @@
 #########################################
 #### Here are codes for 
 #### reproducing simulation results
-#### when p = 100 and n = 300
-#### Run the scripts in the folder 
+#### when p = 100 and n = 300.
+#### Run the codes in the folder 
 #### Comparison_p=100_n=300 sequentially  
 ##########################################
 
@@ -18,7 +18,7 @@
 #### Estimate differetil 
 #### networks by DGM
 ############################
-2) DGGM/DGGM_comparison.m
+2) DGM/DGM_comparison.m
 
 ############################
 #### Estimate differetil 

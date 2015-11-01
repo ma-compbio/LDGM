@@ -45,9 +45,7 @@ X2 = mvnrnd(mu,Sigma2,n);
 
 hSigma2 = cov(X2);
 norm(hSigma2-Sigma2)
-%add by dc
-addpath('/home/dctian/FANTOM5/Scripts/differential graph/differential graph/differential_graph.m')
-addpath('FANTOM5/Scripts/differential graph/differential graph')
+
 lambda = 0.004;
 [hDelta] = differential_graph(hSigma1,hSigma2,lambda);
 

@@ -114,25 +114,7 @@ y = TPR_FPR_auc['Glasso']
 p_val = wilcoxon(x, y, correction=True)
 axis_font = {'size':'10'}
 
-with PdfPages('%sAUC_DGM_vs_Glasso.pdf' % (folder2)) as pdf:
-	plt.figure(figsize=(7.5/4, 7.5/4))
-	ax = TPR_FPR_auc.plot(kind='scatter', x='Glasso', y='DGGM', color='blue', alpha=0.75)
-	ax.set_ylabel('DGGM', **axis_font)
-	ax.set_xlabel('Glasso', **axis_font)
-	lims = [
-		np.min([ax.get_xlim(), ax.get_ylim()]),  # min of both axes
-		np.max([ax.get_xlim(), ax.get_ylim()]),  # max of both axes
-	]
-	
-	ax.plot(lims, lims, 'k-', alpha=0.75, zorder=0)
-	ax.set_aspect('equal')
-	ax.set_xlim(lims)
-	ax.set_ylim(lims)	
-	ax.yaxis.grid(False)
-	ax.xaxis.grid(False)
-	ax.tick_params(axis='both', top = 'off', right='off', labelsize=8)
-	pdf.savefig(bbox_inches='tight')
-	plt.close()
+
 with PdfPages('%sBoxplot_DGM_vs_Glasso.pdf' % (folder2)) as pdf:
 	plt.figure()
 	whiskerprops =dict(linestyle = '-')

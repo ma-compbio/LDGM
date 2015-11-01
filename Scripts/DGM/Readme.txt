@@ -1,1 +1,0 @@
-Matlab implementation of Differential Graphical Model (DGM)
