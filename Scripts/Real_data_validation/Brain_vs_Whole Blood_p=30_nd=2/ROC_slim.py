@@ -77,7 +77,6 @@ print num_node
 print num_edge
 for id in alg_name:
 	file_alg = folder + id + '_delta_vs_hdelta.txt'
-	# file_alg = folder + id + '_delta_union_vs_hdelta.txt'
 	df = pd.read_table(file_alg, sep=',', header=None, nrows=nrow)
 	tp_p = df
 	df1 = df.iloc[:,:k] # estimated positive
@@ -99,46 +98,25 @@ for id in alg_name:
 	roc_point = roc.mean()
 	roc_point = pd.DataFrame(roc_point)
 	roc_point = roc_point.T
-	# roc = pd.concat([roc, roc_point], axis=0)
 	roc_auc = roc.apply(lambda x: auc(x[:k], x[k:(2*k)], reorder=True), axis=1)
 	
 	TPR_FPR_alg_point[id] = roc
 	TPR_FPR_auc[id] = roc_auc
 
-	# precision = df2.div(df1, axis=0)
-	
-	# pre_rec = pd.concat([tpr, precision, col40], axis=1)
-	# pre_rec.columns = range(pre_rec.shape[1])
-	# pre_rec_point = pre_rec.mean()
-	# pre_rec_point = pd.DataFrame(pre_rec_point)
-	# pre_rec_point = pre_rec_point.T
-
-	# pre_rec_auc  = pre_rec.apply(lambda x: auc_na(x), axis=1)
-
-	# Prec_Reca_alg_point[id] = pre_rec
-	# Prec_Reca_auc[id] = pre_rec_auc
-	
 
 TPR_FPR_auc = pd.DataFrame.from_dict(TPR_FPR_auc)
 TPR_FPR_auc['Prop_roc']  = (TPR_FPR_auc.iloc[:, 0] / TPR_FPR_auc.iloc[:, 1])
 print TPR_FPR_auc.describe()
 TPR_FPR_auc.sort('DGGM', inplace=True)
-print TPR_FPR_auc.head(10)
-print TPR_FPR_auc.tail(10)
 TPR_FPR_auc.sort('Glasso', inplace=True)
-print TPR_FPR_auc.head(10)
-print TPR_FPR_auc.tail(10)
 x = TPR_FPR_auc['DGGM']
 y = TPR_FPR_auc['Glasso']
 p_val = wilcoxon(x, y, correction=True)
-print 'One sided pvalue for DGGM > Glasso: %s' % (p_val[1])
 axis_font = {'size':'10'}
+
 with PdfPages('%sAUC_DGM_vs_Glasso.pdf' % (folder2)) as pdf:
 	plt.figure(figsize=(7.5/4, 7.5/4))
 	ax = TPR_FPR_auc.plot(kind='scatter', x='Glasso', y='DGGM', color='blue', alpha=0.75)
-	# m, b = np.polyfit(TPR_FPR_auc['Glasso'], TPR_FPR_auc['DGGM'], 1)
-	# x = np.linspace(0, 1, 10)
-	# ax.plot(x, m*x + b, 'k-', alpha=0.75)
 	ax.set_ylabel('DGGM', **axis_font)
 	ax.set_xlabel('Glasso', **axis_font)
 	lims = [
@@ -173,19 +151,3 @@ with PdfPages('%sBoxplot_DGM_vs_Glasso.pdf' % (folder2)) as pdf:
 	plt.close()
 
 sys.exit()
-
-# Prec_Reca_auc = pd.DataFrame.from_dict(Prec_Reca_auc)
-# Prec_Reca_auc['Prop_pr'] = (Prec_Reca_auc.iloc[:, 0] / Prec_Reca_auc.iloc[:,1])
-# print Prec_Reca_auc.describe()
-# Prec_Reca_auc.sort('DGGM', inplace=True)
-# print Prec_Reca_auc.head()
-# print Prec_Reca_auc.tail()
-
-df1 = TPR_FPR_auc.iloc[:n_simu, :]
-df2 = TPR_FPR_auc.iloc[n_simu:, :]
-df2.index = range(len(df2))
-df1 = df1.sort('DGGM')
-df2 = df2.sort('DGGM')
-
-print df1
-print df2

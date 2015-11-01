@@ -47,8 +47,6 @@ Hsigma2 = RPKM2.T.corr()
 
 TF_can = RPKM1.index.tolist()
 TF_can.sort()
-# print len(TF_can)
-# sys.exit()
 ################
 ## load network
 ################
@@ -105,10 +103,6 @@ Netwk_diff_2 = [id.split('_') for id in Netwk_diff_2_el]
 Netwk_com = set(netwk1_el).intersection(set(netwk2_el))
 Netwk_com = [id.split('_') for id in Netwk_com]
 
-# print len(Netwk_diff_1_el)
-# print len(Netwk_diff_2_el)
-# sys.exit()
-
 
 ####################################
 
@@ -130,11 +124,8 @@ ind1_1 = Netwk_diff_1[1].isin(TF_diff_1)
 
 ind2_0 = Netwk_diff_2[0].isin(TF_diff_2)
 ind2_1 = Netwk_diff_2[1].isin(TF_diff_2)
-# print len(Netwk_diff_1), len(Netwk_diff_2)
 Netwk_diff_1 = Netwk_diff_1[ind1_0 & ind1_1]
 Netwk_diff_2 = Netwk_diff_2[ind2_0 & ind2_1]
-# print len(Netwk_diff_1), len(Netwk_diff_2)
-# sys.exit()
 Netwk_diff_1 = Netwk_diff_1.values.tolist()
 Netwk_diff_2 = Netwk_diff_2.values.tolist()
 
@@ -152,22 +143,14 @@ correl_1 = pd.DataFrame(correl_1)
 correl_1[2] = abs(correl_1[0] - correl_1[1])
 correl_2 = pd.DataFrame(correl_2)
 correl_2[2] = abs(correl_2[0] - correl_2[1])
-# print correl_1.describe()
-# print correl_2.describe()
-# sys.exit()
-# corr_diff_cut_1 = correl_1[2].quantile(q=0.5)
-# corr_diff_cut_2 = correl_2[2].quantile(q=0.5)
 corr_diff_cut_1 = 0.5
 corr_diff_cut_2 = 0.5
 
 
 corr_bool_1 = correl_1[2] > corr_diff_cut_1
 corr_bool_2 = correl_2[2] > corr_diff_cut_2
-# print corr_bool_1.sum(), corr_bool_2.sum()
-# print len(Netwk_diff_1), len(Netwk_diff_2)
 Netwk_diff_1 = [Netwk_diff_1[id] for id in range(len(Netwk_diff_1)) if corr_bool_1[id]]
 Netwk_diff_2 = [Netwk_diff_2[id] for id in range(len(Netwk_diff_2)) if corr_bool_2[id]]
-# print len(Netwk_diff_1), len(Netwk_diff_2)
 #############################
 netwk1 = Netwk_com + Netwk_diff_1
 netwk2 = Netwk_com + Netwk_diff_2
@@ -209,8 +192,6 @@ for sub_edges in itertools.combinations(Netwk_diff_2_nx.edges(), nd_2):
 		
 subg_1_n = len(Subg_diff_1_nx)
 subg_2_n = len(Subg_diff_2_nx)
-# print subg_1_n, subg_2_n
-# sys.exit()
 iter = 0
 while iter < n_simu:
 	param_com = (folder, p, nd, iter)
@@ -261,19 +242,9 @@ while iter < n_simu:
 
 		hsigma1 = data1.T.corr()
 		hsigma2 = data2.T.corr()
-		# hsigma1 = data1.T.corr(method = 'kendall')
-		# hsigma2 = data2.T.corr(method = 'kendall')
-		# print hsigma1.iloc[:5, :5]
-		# hsigma1 = np.sin(hsigma1 * np.pi / 2)
-		# hsigma2 = np.sin(hsigma2 * np.pi / 2)
-		# print hsigma1.iloc[:5, :5]
-		# sys.exit()
 
 		e1 = np.linalg.eig(hsigma1)[0]
 		e2 = np.linalg.eig(hsigma2)[0]
-		# print e1
-		# print e2
-		# sys.exit()
 		if (e1 > 0).all() and (e2 > 0).all():
 			np.savetxt('%shsigma_1_p=%s_nd=%s_iter=%s.txt' % param_com, hsigma1, fmt = '%1.6e', delimiter = ',')	
 			np.savetxt('%shsigma_2_p=%s_nd=%s_iter=%s.txt' % param_com, hsigma2, fmt = '%1.6e', delimiter = ',')	

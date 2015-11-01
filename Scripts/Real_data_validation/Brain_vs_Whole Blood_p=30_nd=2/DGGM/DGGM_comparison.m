@@ -10,7 +10,6 @@ p = 30;
 n_simu = 500;
 num_diff_edge = 2;
 Tissue_key = {'Lung', 'Whole Blood', 'Brain', 'Heart'};
-% #i, j = 0, 2 
 % ###### 0-base
 i = 2;
 j = 1;

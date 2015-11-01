@@ -1,6 +1,5 @@
 rm(list = ls())
 suppressMessages(library(huge))
-library(mail)
 
 Matrix_2_sym = function(A){
 	B = t(A)
@@ -94,7 +93,6 @@ n_simu = 500
 num_diff_edge = 2
 
 Tissue_key = c('Lung', 'Whole Blood', 'Brain', 'Heart')
-#i, j = 0, 2 
 ###### 0-base
 i = 2
 j = 1
