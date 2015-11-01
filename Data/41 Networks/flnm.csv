@@ -1,0 +1,42 @@
+Cell,Group,Type,Name,Two group,Four group
+CD20+,1,Blood,B-Lymphocyte,2,2
+CD34+_Mobilized,1,Blood,Hemat. Stem Cell,2,2
+GM06990,1,Blood,B-Lymphoblastoid,2,2
+GM12865,1,Blood,B-Lymphoblastoid,2,2
+K562,1,Blood,Erythroid,2,2
+NB4,1,Blood,Promyelocytic Leuk.,2,2
+Th1,1,Blood,T-Lymphocyte,2,2
+HepG2,2,Cancer,Hepatoblastoma,2,4
+SK-N-SH_RA,2,Cancer,Neuroblastoma,2,4
+HMVEC_LLy,3,Endothelia,Lung Lymphatic,2,3
+HMVEC-dBl-Ad,3,Endothelia,Adult Dermal Blood,2,3
+HMVEC-dBl-Neo,3,Endothelia,Neonatal Dermal Blood,2,3
+HMVEC-dLy-Neo,3,Endothelia,Neonatal Dermal Lymph.,2,3
+HAEpiC,4,Epithelia,Amniotic Epi.,1,1
+HCPEpiC,4,Epithelia,Choroid Plexus Epi.,1,1
+HEEpiC,4,Epithelia,Esophageal Epi.,1,1
+HIPEpiC,4,Epithelia,Iris Pigment Epi.,1,1
+HRCEpiC,4,Epithelia,Renal Cortical Epi,1,1
+SAEC,4,Epithelia,Small Airway Epi.,1,1
+H7-hESC,5,ESC,ESC,2,4
+fBrain,6,Fetal,Fetal Brain,2,4
+fHeart,6,Fetal,Fetal Heart,2,4
+fLung,6,Fetal,Fetal Lung,2,4
+AG10803,7,Stromal,Skin Fib.,1,1
+AoAF,7,Stromal,Aortic Fibroblast,1,1
+HCF,7,Stromal,Cardiac Fib.,1,1
+HCM,7,Stromal,Cardiac Fib.,1,1
+HFF,7,Stromal,Foreskin Fib.,1,1
+HMF,7,Stromal,Mammary Fib.,1,1
+HPAF,7,Stromal,Pulmonary Artery Fib.,1,1
+HPdLF,7,Stromal,Periodontal Fib.,1,1
+HPF,7,Stromal,Pulmonary Fib.,1,1
+HVMF,7,Stromal,Mesenchymal Fib.,1,1
+IMR90,7,Stromal,Fetal Lung Fib.,1,1
+NHDF-Ad,7,Stromal,Adult Dermal Fib.,1,1
+NHDF-neo,7,Stromal,Neonatal Dermal Fib.,1,1
+NHLF,7,Stromal,Lung Fib.,1,1
+HA-h,8,Visceral,Hippocampal Astrocyte,1,1
+HSMM,8,Visceral,Skeletal Myoblast,1,1
+NH-A,8,Visceral,Astrocyte,1,1
+SKMC,8,Visceral,Skeletal Muscle,1,1
