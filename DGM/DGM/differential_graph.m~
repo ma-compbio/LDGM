@@ -20,7 +20,9 @@ params.verbose1
 
 Theta = reshape(w,[d,d]);
 
-Theta = max(Theta,Theta');
+Theta_T = Theta';
+ind = abs(Theta) < abs(Theta_T);
+Theta(ind) = Theta_T(ind);
 
 end
 
