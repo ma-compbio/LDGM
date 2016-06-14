@@ -5,7 +5,7 @@ This part is contributed by Quanquan GU (http://people.virginia.edu/~qg5w/).
   
 Input:  
 
-Sigma1: correlation matrix calculated from samples of Tissue 1. Can be sample Pearson correlation matrix if data follow normal distributions. Otherwise, we highly recommmend to use latent correlation matrix calculated based on Kendall tau correlation coefficient. See the paper for detail description of latent correlation matrix.  
+Sigma1: correlation matrix calculated from samples of Tissue 1. Can be sample Pearson correlation matrix if data follow normal distributions. Otherwise, we highly recommmend to use **latent correlation matrix calculated based on Kendall tau correlation coefficient**. See the paper for detail description of latent correlation matrix.  
 
 Sigma2: correlation matrix calculated from samples of Tissue 2. Can be sample Pearson correlation matrix if data follow normal distributions. Otherwise, we highly recommmend to use latent correlation matrix calculated based on Kendall tau correlation coefficient. See the paper for detail description of latent correlation matrix.  
 
