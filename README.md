@@ -7,7 +7,7 @@ This repository contains:
 
 Contact  
 Dechao Tian at dechaotian@gmail.com  
-Ma Lab  
+[Ma Lab](http://www.cs.cmu.edu/~jianma/)  
 Computational Biology  
 School of Computer Science  
 Carnegie Mellon University  
