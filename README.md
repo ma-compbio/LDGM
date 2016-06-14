@@ -1,4 +1,4 @@
-# Latent Differential Graphical Model(DGM)
+# Latent Differential Graphical Model(LDGM)
 
 This repository has four folders.
 1) Matlab implementation of LDGM. The implementaion is written by Quanquan Gu (http://people.virginia.edu/~qg5w/). See folder "LDGM".
